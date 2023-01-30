@@ -1,5 +1,5 @@
 locals {
-    azs = ["us-east-2a","us-east-2b","us-east-2c",]
+    azs = ["us-west-2a","us-west-2b","us-west-2c",]
 }
 
 //VPC
@@ -7,13 +7,11 @@ resource "aws_vpc" "vpc" {
   cidr_block = "10.0.0.0/16"
 
   tags = {
-    Name = "vpc-roza"
+    Name = "vpc-mitya"
   }
 }
 
-output "vpc_ids" {
-  value = aws_vpc.vpc.id
-}
+
 
 //SUBNET
 resource "aws_subnet" "mintemir" {
@@ -27,9 +25,7 @@ resource "aws_subnet" "mintemir" {
   }
 }
 
-output subnet_ids {
-  value = aws_subnet.mintemir.*.id
-}
+
 
 //INTERNET_GATEWAY
 resource "aws_internet_gateway" "gw" {

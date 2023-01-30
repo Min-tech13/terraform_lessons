@@ -54,7 +54,7 @@ resource "aws_launch_template" "templete" {
   
  
    tags = {
-    Name = "mityas-templete"
+    Name = "mityas-templete11"
 
   }
 user_data = base64encode("#!/bin/bash \n sudo su \n apt update -y \n apt install apache2 -y \n apt install wget -y \n apt install unzip -y \n systemctl enable apache2 \n systemctl start apache2  \n wget https://github.com/ra1mova/portfolio/archive/refs/heads/main.zip \n unzip main.zip \n A \n cd portfolio-main \n mv README.md css/ fetch.html image/ index.html js/ shop.html /var/www/html/ \nnohup python -m SimpleHTTPServer 80 &")
@@ -107,4 +107,3 @@ data "terraform_remote_state" "network" {
     path = "../networking/terraform.tfstate"
   }
 }
-
