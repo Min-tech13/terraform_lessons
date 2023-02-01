@@ -1,7 +1,4 @@
-# output instance_ids {
-    
-#     value = aws_instance.day_4_instance.*.id
-# }
+
 
 output "instance_ids" {
   value = {
@@ -9,8 +6,7 @@ output "instance_ids" {
   }
 }
 
-# output "instance_ids" {
-#   value = {
-#     for instance in aws_instance.day_4_instance : instance.value.id => instance.value.id
-#   }
-# }
+#this chakes just bucket name id
+output "resource_code" {
+  value = random_string.bucket_name.*.id
+}

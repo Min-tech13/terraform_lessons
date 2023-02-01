@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"autoscaling","Source":"../../modules/autoscaling","Dir":"../../modules/autoscaling"},{"Key":"vpc-default","Source":"../../modules/networking","Dir":"../../modules/networking"}]}

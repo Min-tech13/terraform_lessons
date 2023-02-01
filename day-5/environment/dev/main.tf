@@ -3,7 +3,7 @@
 #
 # Use Our Terraform Module to create AWS VPC Networks
 #
-# Made by Denis Astahov. Summer 2019
+# Made Mintemir. Summer 2019
 #----------------------------------------------------------
 provider "aws" {
   region = "us-east-1"
@@ -11,6 +11,8 @@ provider "aws" {
 
 module "vpc-default" {
   source = "../../modules/networking"
+
+  
   
 }
 
@@ -23,13 +25,13 @@ module "autoscaling-default" {
 }
 
 #====================================================
-output "vpc_id" {
-  value = module.vpc-default.vpc_id
+# output "vpc_id" {
+#   value = module.vpc-default.vpc_id
 
-}
+# }
 
-output "public_subnet_ids" {
-  value = module.vpc-default.public_subnet_ids
-}
+# output "public_subnet_ids" {
+#   value = module.vpc-default.public_subnet_ids
+# }
 
 

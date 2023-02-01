@@ -3,7 +3,7 @@ resource "aws_s3_bucket" "bucket_folder" {
 }
 
 resource "aws_s3_bucket" "random_buckets" {
-  count = var.bucket_count == 4 ? var.bucket_count : 0
+  count = var.bucket_count == 4 ?  var.bucket_count : 0
 
   bucket = "demo-${random_string.bucket_name[count.index].result}"
 
