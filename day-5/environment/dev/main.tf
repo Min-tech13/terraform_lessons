@@ -21,6 +21,7 @@ module "autoscaling-default" {
   source = "../../modules/autoscaling"
   vpc_id     =  module.vpc-default.vpc_id
   subnet_ids  =  module.vpc-default.public_subnet_ids
+  env = stage
   
 }
 
